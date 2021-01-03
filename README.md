@@ -58,12 +58,11 @@ The first dropdown menu is shown when **hovering over** the mouse. Let's see the
 </div>
 ```
 
-In this example, you have two links from the classic navigation bar. The first one does'nt have a dropdown menu and it's set as the active link. Then, the other link has a dropdown menu. You can see that the "name" of the dropdown menu is a link ("Science"). It gives you a lot of flexibility. Indeed, if you do not want the sidebar to appear too early (for tablets for example), you can choose to keep the classic navigation bar because the dropdown menus are not essential.
+In this example, you have two links from the classic navigation bar. The first one does'nt have a dropdown menu and it's set as the active link. Then, the other link has a dropdown menu. You can see that the "name" of the dropdown menu is a link ("Science"). It gives you a lot of flexibility. Indeed, if you do not want the sidebar to appear too early (for tablets for example), you can choose to keep the classic navigation bar because **the dropdown menus are not essential**.
 
 ## The dropdown menu of the sidebar
 
-In the sidebar, you can have dropdown menus. Great for mobile !!
-Actually, the sidebar is just awesome, with cool animations and flexibility.
+In the sidebar, you can have dropdown menus. Great for mobile ! The sidebar is very nice, with cool animations and a lot of flexibility.
 
 First of all, when you reach the breakpoint, a burger appears. When you click on it, a nice progressive animation occurs: the burger becomes a cross, the sidebar and a shader appears. Indeed, the background darkens. The sidebar disappears when the user clicks on the shader or on the cross.
 
