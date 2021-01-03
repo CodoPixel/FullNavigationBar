@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing FullNavigationBar</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar-dark.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0; margin: 0;
+            height: 100vh;
+            background-color: rgb(100, 100, 100);
+            background-image: url(star-wars-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        @media screen and (max-width: 950px) {
+            header nav {
+                display:none;
+            }
+
+            #sidebar {
+                display:initial;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="sidebar">
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="sidebar-shader"></div>
+            <div class="content-sidebar-menu">
+                <div class="sidebar-padding">
+                    <div class="sidebar-cross">
+                        <div class="cross-line1"></div>
+                        <div class="cross-line2"></div>
+                        <div class="cross-line3"></div>
+                    </div>
+                    <a href="/" class="sidebar-mainlink">Home</a>
+                    <div class="container-sidebar-dropdown">
+                        <button type="button" class="sidebar-dropdown-name">Science</button>
+                        <ul class="content-sidebar-dropdown">
+                            <li><a href="/">Popularization</a></li>
+                            <li><a href="/">Calculations and encryption</a></li>
+                            <li><a href="/">Human Brain</a></li>
+                            <li><a href="/">Psychology</a></li>
+                            <li><a href="/">The sleep</a></li>
+                        </ul>
+                        <div class="sidebar-plus">+</div>
+                    </div>
+                    <div class="container-sidebar-dropdown">
+                        <button type="button" class="sidebar-dropdown-name">Programmation</button>
+                        <ul class="content-sidebar-dropdown">
+                            <li><a href="https://learnweb.sciencesky.fr/">LearnWeb</a></li>
+                        </ul>
+                        <div class="sidebar-plus">+</div>
+                    </div>
+                    <div class="container-sidebar-dropdown">
+                        <button type="button" class="sidebar-dropdown-name">Mathematics</button>
+                        <ul class="content-sidebar-dropdown">
+                            <li><a href="/">Our formulas</a></li>
+                            <li><a href="/">Topology</a></li>
+                            <li><a href="/">Calculate a volume</a></li>
+                        </ul>
+                        <div class="sidebar-plus">+</div>
+                    </div>
+                </div>
+                <div class="sidebar-social-networks">
+                    <a href="https://github.com/CodoPixel" target="_blanck">My GitHub</a>
+                </div>
+            </div>
+        </div>
+        <h1>ScienceSky v4</h1>
+        <nav>
+            <div class="nav-container-link">
+                <a href="/" class="mainlink active-link">Home</a>
+            </div>
+            <div class="container-dropdown nav-container-link">
+                <a href="Sciences/Articles/index.php" class="name-of-dropdown">Science</a>
+                <div class="content-dropdown">
+                    <a href="/">Popularization</a>
+                    <a href="/">Calculations and encryption</a>
+                    <a href="/">Human Brain</a>
+                    <a href="/">Psychology</a>
+                    <a href="/">The sleep</a>
+                </div>
+            </div>
+            <div class="container-dropdown nav-container-link">
+                <a href="https://learnweb.sciencesky.fr/" class="name-of-dropdown">Programmation</a>
+                <div class="content-dropdown">
+                    <a href="https://learnweb.sciencesky.fr/">LearnWeb</a>
+                </div>
+            </div>
+            <div class="container-dropdown nav-container-link">
+                <a href="Mathematiques/index.php" class="name-of-dropdown">Mathematics</a>
+                <div class="content-dropdown">
+                    <a href="/">Our formulas</a>
+                    <a href="/">Topology</a>
+                    <a href="/">Calculate a volume</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="controller.js"></script>
+    <script>
+        // Useless, just if you want to take a look at my website (ScienceSky)
+        document.querySelector('h1').addEventListener('click', function(){
+            document.location.href='https://sciencesky.fr/';
+        });
+    </script>
+</body>
+</html>

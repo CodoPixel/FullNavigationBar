@@ -1,0 +1,268 @@
+/*
+*
+* Media queries
+*
+*/
+
+#sidebar {
+    display:none;
+}
+
+/*
+*
+* Burger animation
+*
+*/
+
+.burger {
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle-burger .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle-burger .line2 {
+    opacity: 0;
+}
+
+.toggle-burger .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*
+*
+* Content of the sidebar menu
+*
+*/
+
+.content-sidebar-menu {
+    position:fixed;
+    z-index:2000;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 300ms linear;
+}
+
+.toggle-sidebar .content-sidebar-menu {
+    width: 80%;
+}
+
+.sidebar-padding {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-shader {
+    position:fixed;
+    z-index: 1999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in;
+}
+
+.toggle-sidebar .sidebar-shader {
+    background-color: rgb(0, 0, 0, 0.5);
+    pointer-events: all;
+}
+
+div.sidebar-cross {
+    cursor: pointer;
+    margin: 0 0 45px 0;
+    height: auto;
+    padding: 0;
+    outline:none;
+}
+
+div.sidebar-cross div {
+    width: 20px;
+    height: 2px;
+    background-color: var(--blue-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+div.sidebar-cross .cross-line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+div.sidebar-cross .cross-line2 {
+    opacity: 0;
+}
+
+div.sidebar-cross .cross-line3 {
+    transform: rotate(45deg) translate(-4px, -6px);
+}
+
+.sidebar-mainlink,
+button.sidebar-dropdown-name {
+    cursor: pointer;
+    outline: none;
+    display:block;
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+    color: var(--blue-color);
+    letter-spacing: 1.6px;
+    font-size:0.9em;
+    text-transform: uppercase;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin: 0 0 40px 0;
+    border-bottom: 1px solid var(--light-blue-color);
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+.container-sidebar-dropdown {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--light-blue-color);
+    margin-bottom: 40px;
+}
+
+.sidebar-mainlink {
+    position: relative;
+}
+
+.sidebar-mainlink,
+.container-sidebar-dropdown {
+    z-index: 400;
+}
+
+.container-sidebar-dropdown,
+.sidebar-mainlink {
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all 200ms linear 200ms;
+}
+
+.toggle-sidebar .container-sidebar-dropdown,
+.toggle-sidebar .sidebar-mainlink {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.sidebar-plus {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    color: var(--ablue-color);
+    cursor: pointer;
+    pointer-events:none;
+}
+
+button.sidebar-dropdown-name {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: none;
+    border: none;
+    margin: 0;
+    letter-spacing: 1.8px;
+    color: var(--ablue-color);
+}
+
+.content-sidebar-dropdown {
+    list-style-type: none;
+    padding-left: 25px;
+    max-height: 0px;
+    margin: 0;
+    overflow: hidden; /* in order to avoid problems while scrolling the sidebar */
+    transition: all 300ms ease-out;
+}
+
+.content-sidebar-dropdown li {
+    padding-bottom: 15px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 200ms ease-out;
+}
+
+.content-sidebar-dropdown li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    pointer-events: none;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+    color: var(--light-blue-text-color);
+}
+
+/* .toggle-dropdown comes from .container-sidebar-dropdown (added in JS) */
+.toggle-dropdown .content-sidebar-dropdown {
+    max-height: 300px; /* https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css */
+}
+
+.toggle-dropdown .content-sidebar-dropdown li {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.toggle-dropdown .content-sidebar-dropdown li a {
+    pointer-events: all;
+}
+
+/*
+*
+* Social networks (GitHub at the bottom)
+*
+*/
+
+.sidebar-social-networks {
+    position:relative;
+    z-index: 500;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    box-sizing: border-box;
+    display:flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--blue-color);
+    background-color: rgb(250, 250, 250);
+    opacity: 0;
+    transition: all 200ms linear 300ms;
+}
+
+.toggle-sidebar .sidebar-social-networks {
+    opacity: 1;
+}
+
+.sidebar-social-networks a {
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+    color: var(--light-blue-text-color);
+}

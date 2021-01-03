@@ -1,0 +1,163 @@
+header {
+    width: 100%;
+    height: 15vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 60px 10px 60px;
+    margin: 0;
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        padding: 20px 25px 10px 25px;
+    }
+}
+
+header h1 {
+    font-size: 1.6em;
+    color: #fff;
+}
+
+header nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .mainlink {
+    opacity: 0.8;
+    font-size: 1.1em;
+}
+
+header nav .nav-container-link:not(header nav .nav-container-link:last-child) {
+    margin-right: 30px;
+}
+
+/*
+*
+* Dropdown menu from classic navigation bar
+*
+*/
+
+.container-dropdown {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    height: 50px;
+}
+
+.container-dropdown .name-of-dropdown {
+    outline:none;
+    border:none;
+    text-decoration: none;
+    background:none;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    opacity: 0.8;
+    display:inline;
+    transition: opacity 200ms ease-in;
+}
+
+.container-dropdown .name-of-dropdown:hover {
+    opacity: 1;
+}
+
+.dropdown-visible {
+    opacity: 1!important;
+    transform: translateY(0px)!important;
+    pointer-events: all!important;
+}
+
+.content-dropdown {
+    opacity: 0;
+    margin: 0;
+    pointer-events: none;
+    position:absolute;
+    z-index:500;
+    border-radius: 5px;
+    background-color: white;
+    top: 50px;
+    width: 170px;
+    transform: translateY(-10px);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    transition: all 200ms ease-in;
+}
+
+.content-dropdown a:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.content-dropdown a {
+    padding: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align:center;
+    color: #505050;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 200ms ease-in;
+}
+
+.content-dropdown a:hover {
+    background-color: rgba(0, 124, 167, 0.1);
+}
+
+.content-dropdown::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    clear: both;
+    z-index:-1;
+}
+
+/*
+*
+* Main links with awesome animation
+*
+*/
+
+.mainlink {
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    display: inline;
+    background: linear-gradient(to top, #fff 0%, #fff 3%, transparent 10.01%) no-repeat left bottom/0 100%;
+    -webkit-transition-property: background-size, opacity;
+    transition-property: background-size, opacity;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+}
+
+.mainlink:hover {
+    opacity: 1;
+    background-size: 100% 100%;
+}
+
+.active-link {
+    font-weight: bold;
+    background-size: 100% 100%!important;
+}
