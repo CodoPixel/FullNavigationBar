@@ -33,8 +33,13 @@ header nav .mainlink {
     font-size: 1.1em;
 }
 
-header nav .nav-container-link:not(header nav .nav-container-link:last-child) {
+header nav .nav-container-link {
     margin-right: 30px;
+}
+
+/* for Edge that didn't like my :not() */
+header nav .nav-container-link:last-child {
+    margin-right: 0px!important;
 }
 
 /*
