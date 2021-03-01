@@ -1,19 +1,20 @@
 # FullNavigationBar
 
-A full responsive navigation bar for a website with dropdown menus and awesome sidebar. 
+A full responsive navigation bar for a website with dropdown menus and awesome sidebar.
 
 ## Get started
 
 First of all, you have to copy the source code:
 
-```
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/sidebar-dark.css"> <!-- or sidebar-light.css -->
+```html
+<link rel="stylesheet" href="css/header.css" />
+<link rel="stylesheet" href="css/sidebar-dark.css" />
+<!-- or sidebar-light.css -->
 ```
 
 With the javascript file at the end of `<body>`:
 
-```
+```html
 <script src="controller.js"></script>
 ```
 
@@ -21,15 +22,15 @@ This javascript file will control whether the user clicks on the burger or on th
 
 Now you have to add the media queries. If you do not add the media queries, the sidebar will never appear. I decided to set the breakpoint to 950px.
 
-```
+```css
 @media screen and (max-width: 950px) {
-    header nav {
-        display:none;
-    }
+  header nav {
+    display: none;
+  }
 
-    #sidebar {
-        display:initial;
-    }
+  #sidebar {
+    display: initial;
+  }
 }
 ```
 
@@ -40,21 +41,21 @@ Feel free to modify the css files in order to customize the navigation bar.
 There are two types of dropdown: one from the classic navigation bar, and one from the sidebar.
 The first dropdown menu is shown when **hovering over** the mouse. Let's see the code:
 
-```
+```html
 <!-- classic link without dropdown menu -->
 <div class="nav-container-link">
-    <a href="/" class="mainlink active-link">Home</a>
+  <a href="/" class="mainlink active-link">Home</a>
 </div>
 <!-- awesome link with dropdown menu -->
 <div class="container-dropdown nav-container-link">
-    <a href="/" class="name-of-dropdown">Science</a>
-    <div class="content-dropdown">
-        <a href="/">Popularization</a>
-        <a href="/">Calculations and encryption</a>
-        <a href="/">Human Brain</a>
-        <a href="/">Psychology</a>
-        <a href="/">The sleep</a>
-    </div>
+  <a href="/" class="name-of-dropdown">Science</a>
+  <div class="content-dropdown">
+    <a href="/">Popularization</a>
+    <a href="/">Calculations and encryption</a>
+    <a href="/">Human Brain</a>
+    <a href="/">Psychology</a>
+    <a href="/">The sleep</a>
+  </div>
 </div>
 ```
 
